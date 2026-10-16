@@ -1,6 +1,5 @@
 import string
 from collections import Counter, defaultdict
-from math import gcd
 
 ALPHABET = string.ascii_uppercase
 N = 26
@@ -183,9 +182,6 @@ def main():
 
     print("=== VIGENERE CRYPTANALYSIS ===")
     print(f"Ciphertext length: {len(ciphertext)} letters")
-
-    if len(ciphertext) != 350:
-        print("WARNING: Expected 350 letters for Problem 3.")
 
     # (a) Repeated polygrams and distance factors
     factor_counts = kasiski_examination(ciphertext)
